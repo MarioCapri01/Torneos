@@ -34,10 +34,10 @@ public class TorneosController {
         Torneo torneo = service.creaTorneo(entity.getNombreTorneo(), entity.getTipoTorneo());
         return ResponseEntity.status(HttpStatus.CREATED).body(torneo);
     } 
-    /*@GetMapping("/allTorneos")
+    @GetMapping("/allTorneos")
     public ResponseEntity<List<Torneo>> getTorneos() {
         return ResponseEntity.ok(service.getAllTorneos());
-    }*/
+    }
     
     
 }

@@ -26,6 +26,9 @@ public class Torneo {
     @Column(name = "tipo_torneo")
     private String tipoTorneo;
 
+    public Torneo(){
+    }
+
     public Torneo(String nombreTorneo, String tipoTorneo){
         this.nombreTorneo = nombreTorneo;
         this.tipoTorneo = tipoTorneo;
