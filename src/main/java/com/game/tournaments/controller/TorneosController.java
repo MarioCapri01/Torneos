@@ -10,9 +10,7 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.scheduling.config.Task;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -24,7 +22,6 @@ public class TorneosController {
     public TorneosController(TorneoService service){
         this.service = service;
     }
-    //private final TorneoService torneoCont;
     @GetMapping("/holamundo")
     public String getHolaMundo() {
         return "Hola Mundo";

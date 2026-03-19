@@ -14,7 +14,7 @@ import jakarta.validation.constraints.Size;
 public class Torneo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id_torneo;
 
     @NotBlank(message = "El Nombre es obligatorio")
     @Size(min = 3, max = 100, message = "El nombre debe tener entre 3 y 100 caracteres")
