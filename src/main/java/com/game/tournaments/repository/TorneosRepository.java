@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.game.tournaments.model.Torneo;
 @Repository
-public interface TorneosRepository extends JpaRepository<Torneo, Long> {
+public interface TorneosRepository extends JpaRepository<Torneo, Integer> {
     public List<Torneo> getTorneosByTipoTorneo(String tipo);
     public Torneo getTorneoByNombreTorneo(String nombre);
 }
