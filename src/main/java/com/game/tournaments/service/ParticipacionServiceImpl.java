@@ -4,7 +4,6 @@ import com.game.tournaments.model.Jugador;
 import com.game.tournaments.model.Participacion;
 import com.game.tournaments.model.Torneo;
 import com.game.tournaments.repository.ParticipacionRepository;
-import java.util.List;
 
 import org.springframework.stereotype.Service;
 
@@ -17,7 +16,7 @@ public class ParticipacionServiceImpl implements ParticipacionService{
 
     @Override
     public Participacion creaParticipacion(Torneo torneo, Jugador jugador){
-        return repository.save(new Participacion());
+        return repository.save(new Participacion(jugador, torneo));
     }
 
     @Override
@@ -25,6 +24,15 @@ public class ParticipacionServiceImpl implements ParticipacionService{
         Participacion part = repository.findById(id).get();
         //part.getJugador().add(jugador);
         return part;
+    }
+
+    @Override
+    public Jugador getJugadorById(int id){
+        return repository.getJugadorById(id);
+    }
+    @Override
+    public Torneo getTorneoById(int id){
+        return repository.getTorneoById(id);
     }
 
 

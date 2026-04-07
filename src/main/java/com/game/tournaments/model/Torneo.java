@@ -45,12 +45,12 @@ public class Torneo {
         this.nombreTorneo = nombreTorneo;
     }
     public String getNombreTorneo(){
-        return nombreTorneo;
+        return this.nombreTorneo;
     }
     public void setTipoTorneo(String tipoTorneo){
         this.tipoTorneo = tipoTorneo;
     }
     public String getTipoTorneo(){
-        return tipoTorneo;
+        return this.tipoTorneo;
     }
 }

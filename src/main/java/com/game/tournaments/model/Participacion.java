@@ -1,12 +1,10 @@
 package com.game.tournaments.model;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
@@ -28,13 +26,14 @@ public class Participacion {
     @JoinColumn(name = "id_torneo")//, referencedColumnName = "id_torneo")
     private Torneo torneo;
 
+
     public Participacion(){}
 
+    //Constructor con Objetos
     public Participacion(Jugador jugador, Torneo torneo){
         this.jugador = jugador;
         this.torneo = torneo;
     }
-    
     public void setJugador(Jugador jugador){
         this.jugador = jugador;
     }

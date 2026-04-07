@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.game.tournaments.model.Torneo;
 import com.game.tournaments.service.TorneoService;
 
+
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
@@ -26,7 +27,7 @@ public class TorneosController {
     public String getHolaMundo() {
         return "Hola Mundo";
     }
-    @PostMapping("/new")
+    @PostMapping("/new") 
     public ResponseEntity<Torneo> nuevoTorneo(@RequestBody Torneo entity) {
         Torneo torneo = service.creaTorneo(entity.getNombreTorneo(), entity.getTipoTorneo());
         return ResponseEntity.status(HttpStatus.CREATED).body(torneo);
