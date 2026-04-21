@@ -28,6 +28,7 @@ public class Jugador {
     @OneToMany(mappedBy = "jugador")
     private List<Participacion> participaciones;
 
+    private int id_torneo;
     public Jugador(){
     }
 
@@ -35,12 +36,23 @@ public class Jugador {
         this.nombre = nombre;
     }
 
+    public Jugador(String nombre, int id_torneo){
+        this.nombre = nombre;
+        this.id_torneo = id_jugador;
+    }
     public void setNombre(String nombre){
         this.nombre = nombre;
     }
 
     public String getNombre(){
         return this.nombre;
+    }
+
+    public void setIdTorneo(int id_torneo){
+        this.id_torneo = id_torneo;
+    }
+    public int getIdTorneo(){
+        return this.id_torneo;
     }
 
 }

@@ -19,11 +19,11 @@ public class Participacion {
     private int id_participacion;
 
     @ManyToOne
-    @JoinColumn(name = "id_jugador")//, referencedColumnName = "id_jugador" )
+    @JoinColumn(name = "id_jugador")
     private Jugador jugador;
 
     @ManyToOne
-    @JoinColumn(name = "id_torneo")//, referencedColumnName = "id_torneo")
+    @JoinColumn(name = "id_torneo")
     private Torneo torneo;
 
 

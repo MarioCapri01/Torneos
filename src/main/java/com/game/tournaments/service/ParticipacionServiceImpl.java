@@ -6,6 +6,7 @@ import com.game.tournaments.model.Torneo;
 import com.game.tournaments.repository.ParticipacionRepository;
 
 import org.springframework.stereotype.Service;
+import java.util.List;
 
 @Service
 public class ParticipacionServiceImpl implements ParticipacionService{
@@ -33,6 +34,14 @@ public class ParticipacionServiceImpl implements ParticipacionService{
     @Override
     public Torneo getTorneoById(int id){
         return repository.getTorneoById(id);
+    }
+    @Override
+    public List<Integer> getParticipacionesById(int id){
+        return repository.getParticipaciones(id);
+    }
+    @Override
+    public List<Jugador> getJugadoresById(int id){
+        return repository.getJugadores(id);
     }
 
 
